@@ -1,0 +1,26 @@
+<h2>{{ title }}</h2>
+
+<hr />
+
+<div class="row">
+  <div class="col">
+    <dbz-list
+      (onDelete)="onDeleteCharacter($event)"
+      [characterList]="characters"
+    ></dbz-list>
+  </div>
+  <div class="col">
+    <dbz-add-character
+      (onNewCharacter)="onNewCharacter($event)"
+    ></dbz-add-character>
+  </div>
+  <!-- <app-test-decorators [message]="parentMessage"></app-test-decorators>
+  <app-second-test (messageEvent)="receiveMessage($event)"></app-second-test>
+  <p *ngIf="childMessage">
+    <br />
+    Mensaje recibido del hijo:
+
+    <span class="text-danger text-bold">{{ childMessage }}</span>
+  </p>
+  <hr class="mt-4" /> -->
+</div>
